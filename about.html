@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaytuna College | About</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b4b2a86a62.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -228,6 +234,71 @@
                             students committed to academic excellence.
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Supporters Say</h2>
+
+            <div class="testimonials-slider">
+                <button class="slider-nav prev" onclick="changeTestimonial(-1)">‹</button>
+                <button class="slider-nav next" onclick="changeTestimonial(1)">›</button>
+
+                <div class="testimonials-wrapper" id="testimonialsWrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon-left">"</div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                I can't thank your college enough for bringing some of the beautiful
+                                teachings of Islam to our society here in UK. Keep up the good work and
+                                please don't forget to share as much as possible on YouTube or other
+                                avenues.
+                            </p>
+                            <p class="testimonial-author">Azraz, United Kingdom</p>
+                        </div>
+                        <div class="quote-icon-right">"</div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon-left">"</div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                Zaytuna College represents a beacon of hope for Muslim education in America.
+                                The dedication to academic excellence while maintaining Islamic values is
+                                truly inspiring. May Allah continue to bless this institution and all those
+                                who support it.
+                            </p>
+                            <p class="testimonial-author">Sarah M., California</p>
+                        </div>
+                        <div class="quote-icon-right">"</div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon-left">"</div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                As a parent, I am grateful for institutions like Zaytuna that provide
+                                our children with both spiritual and intellectual nourishment. The college's
+                                commitment to reviving the Islamic scholarly tradition while engaging with
+                                contemporary thought is exactly what our community needs.
+                            </p>
+                            <p class="testimonial-author">Dr. Ahmed K., New York</p>
+                        </div>
+                        <div class="quote-icon-right">"</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="testimonial-dots">
+                    <button class="dot active" onclick="goToTestimonial(0)"></button>
+                    <button class="dot" onclick="goToTestimonial(1)"></button>
+                    <button class="dot" onclick="goToTestimonial(2)"></button>
                 </div>
             </div>
         </div>

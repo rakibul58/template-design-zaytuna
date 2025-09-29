@@ -62,3 +62,36 @@ function goToSlide(index) {
 setInterval(() => {
   moveSlide(1);
 }, 5000);
+
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll('.testimonial-slide');
+const dots = document.querySelectorAll('.dot');
+const wrapper = document.getElementById('testimonialsWrapper');
+const totalTestimonials = testimonials.length;
+
+function updateTestimonials() {
+  wrapper.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentTestimonial);
+  });
+}
+
+function changeTestimonial(direction) {
+  currentTestimonial = (currentTestimonial + direction + totalTestimonials) % totalTestimonials;
+  updateTestimonials();
+}
+
+function goToTestimonial(index) {
+  currentTestimonial = index;
+  updateTestimonials();
+}
+
+// Auto-advance testimonials every 7 seconds
+setInterval(() => {
+  changeTestimonial(1);
+}, 7000);
+
+// Make functions global
+window.changeTestimonial = changeTestimonial;
+window.goToTestimonial = goToTestimonial;
