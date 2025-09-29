@@ -1954,11 +1954,6 @@ body {
   background-color: var(--background-color);
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .mission-header {
   text-align: center;
   margin-bottom: 40px;
@@ -2726,4 +2721,242 @@ body {
 
 .testimonial-slide {
   animation: fadeIn 0.6s ease-out;
+}
+
+.liberal-arts-section {
+  padding: 100px 20px;
+  background-color: var(--background-color);
+}
+
+/* Header with decorative element */
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.decorative-divider {
+  width: 80px;
+  height: 2px;
+  background-color: var(--primary-green);
+  margin: 0 auto;
+  position: relative;
+}
+
+.decorative-divider::before,
+.decorative-divider::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.decorative-divider::before {
+  left: -15px;
+}
+
+.decorative-divider::after {
+  right: -15px;
+}
+
+/* Content Text */
+.content-text {
+  background: var(--background-color);
+  /* padding: 50px 45px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
+  margin-bottom: 60px;
+}
+
+.content-text p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.content-text p:last-child {
+  margin-bottom: 0;
+}
+
+.content-text strong {
+  color: var(--primary-red);
+  font-weight: 600;
+}
+
+.content-text em {
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+/* Video Section */
+.video-section {
+  text-align: center;
+}
+
+.video-title {
+  font-size: 2rem;
+  color: var(--primary-red);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Video Thumbnail/Placeholder */
+.video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.play-button:hover {
+  background: var(--primary-red);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 25px solid var(--primary-red);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-left: 5px;
+}
+
+.play-button:hover::after {
+  border-left-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .liberal-arts-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .video-title {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  .content-text {
+    padding: 35px 30px;
+  }
+
+  .content-text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .play-button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .play-button::after {
+    border-left: 20px solid var(--primary-red);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .video-title {
+    font-size: 1.5rem;
+  }
+
+  .content-text {
+    padding: 25px 20px;
+  }
+
+  .content-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .play-button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .play-button::after {
+    border-left: 16px solid var(--primary-red);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
 }

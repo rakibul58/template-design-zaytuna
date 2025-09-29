@@ -95,3 +95,28 @@ setInterval(() => {
 // Make functions global
 window.changeTestimonial = changeTestimonial;
 window.goToTestimonial = goToTestimonial;
+
+function playVideo() {
+  const videoWrapper = document.querySelector('.video-wrapper');
+  const thumbnail = document.querySelector('.video-thumbnail');
+
+  // Replace with your actual video embed code or video element
+  // Example for YouTube:
+  const videoEmbed = `
+                <iframe 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1" 
+                    allowfullscreen
+                    allow="autoplay">
+                </iframe>
+            `;
+
+  // Or for direct video file:
+  // const videoEmbed = `
+  //     <video controls autoplay>
+  //         <source src="path/to/campus-tour.mp4" type="video/mp4">
+  //     </video>
+  // `;
+
+  thumbnail.style.display = 'none';
+  videoWrapper.innerHTML = videoEmbed;
+}
