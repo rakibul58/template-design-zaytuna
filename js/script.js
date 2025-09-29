@@ -120,3 +120,77 @@ function playVideo() {
   thumbnail.style.display = 'none';
   videoWrapper.innerHTML = videoEmbed;
 }
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('click', function () {
+    const topic = this.dataset.topic;
+    alert(`Navigating to ${topic.charAt(0).toUpperCase() + topic.slice(1)} page...`);
+  });
+});
+
+
+const dots2 = document.querySelectorAll('.dot2');
+const StudentTestimonials = [
+  {
+    text: "Truly what Zaytuna is teaching is absolutely critical. We need Zaytuna, not need strong, intellectual, balanced muslims that unite the inner and outer sciences and work to perfect their character. May Allah provide for Zaytuna!",
+    author: "Mallika Kasudia"
+  },
+  {
+    text: "The education at Zaytuna has transformed my understanding of both Islamic and Western traditions. The faculty's dedication to excellence is truly inspiring.",
+    author: "Ahmad Hassan"
+  },
+  {
+    text: "Being part of this community has been a blessing. The integration of traditional Islamic scholarship with contemporary academic rigor is unmatched.",
+    author: "Sarah Ahmed"
+  }
+];
+
+let currentIndex = 0;
+
+dots2.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateTestimonial();
+  });
+});
+
+function updateTestimonial() {
+  const testimonialText = document.querySelector('.testimonial-text');
+  const testimonialAuthor = document.querySelector('.testimonial-author');
+
+  // Update active dot
+  dots2.forEach(d => d.classList.remove('active'));
+  dots2[currentIndex].classList.add('active');
+
+  // Fade out
+  testimonialText.style.opacity = '0';
+  testimonialAuthor.style.opacity = '0';
+
+  setTimeout(() => {
+    testimonialText.textContent = StudentTestimonials[currentIndex].text;
+    testimonialAuthor.textContent = StudentTestimonials[currentIndex].author;
+
+    // Fade in
+    testimonialText.style.transition = 'opacity 0.5s ease';
+    testimonialAuthor.style.transition = 'opacity 0.5s ease';
+    testimonialText.style.opacity = '1';
+    testimonialAuthor.style.opacity = '1';
+  }, 300);
+}
+
+// Auto-rotate testimonials
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % StudentTestimonials.length;
+  updateTestimonial();
+}, 6000);
+
+// Play button hover effect
+const playButtons = document.querySelectorAll('.play-button');
+playButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Video player would open here');
+  });
+});
