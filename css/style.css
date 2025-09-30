@@ -3687,211 +3687,210 @@ body {
 }
 
 .combined-section {
-            padding: 100px 20px 80px;
-            background-color: var(--bg-light);
-        }
+  padding: 100px 20px 80px;
+  background-color: var(--bg-light);
+}
 
+/* Testimonials Section */
+.testimonials-area {
+  margin-bottom: 80px;
+}
 
-        /* Testimonials Section */
-        .testimonials-area {
-            margin-bottom: 80px;
-        }
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-red);
+  margin-bottom: 60px;
+  font-weight: 500;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-red);
-            margin-bottom: 60px;
-            font-weight: 500;
-        }
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+}
 
-        .testimonials-slider {
-            position: relative;
-            overflow: hidden;
-        }
+.testimonials-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-        .testimonials-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+.testimonial-slide {
+  min-width: 100%;
+  padding: 40px 80px;
+  text-align: center;
+  position: relative;
+}
 
-        .testimonial-slide {
-            min-width: 100%;
-            padding: 40px 80px;
-            text-align: center;
-            position: relative;
-        }
+.quote-icon-left {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 7rem;
+  color: var(--quote-color);
+  line-height: 1;
+  font-family: Georgia, serif;
+  opacity: 0.4;
+}
 
-        .quote-icon-left {
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 7rem;
-            color: var(--quote-color);
-            line-height: 1;
-            font-family: Georgia, serif;
-            opacity: 0.4;
-        }
+.quote-icon-right {
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  font-size: 7rem;
+  color: var(--quote-color);
+  line-height: 1;
+  font-family: Georgia, serif;
+  opacity: 0.4;
+}
 
-        .quote-icon-right {
-            position: absolute;
-            bottom: -20px;
-            right: 10px;
-            font-size: 7rem;
-            color: var(--quote-color);
-            line-height: 1;
-            font-family: Georgia, serif;
-            opacity: 0.4;
-        }
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+}
 
-        .testimonial-content {
-            position: relative;
-            z-index: 2;
-        }
+.testimonial-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-style: italic;
+}
 
-        .testimonial-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            font-style: italic;
-        }
+.testimonial-author {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-style: normal;
+}
 
-        .testimonial-author {
-            font-size: 1rem;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-style: normal;
-        }
+/* Navigation Dots */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
 
-        /* Navigation Dots */
-        .testimonial-dots {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 40px;
-        }
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #d0d0d0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            padding: 0;
-        }
+.dot:hover {
+  background-color: #a0a0a0;
+}
 
-        .dot:hover {
-            background-color: #a0a0a0;
-        }
+.dot.active {
+  background-color: var(--primary-green);
+  width: 35px;
+  border-radius: 6px;
+}
 
-        .dot.active {
-            background-color: var(--primary-green);
-            width: 35px;
-            border-radius: 6px;
-        }
+/* Contact Section */
+.contact-area {
+  text-align: center;
+}
 
-        /* Contact Section */
-        .contact-area {
-            text-align: center;
-        }
+.contact-title {
+  font-size: 2rem;
+  color: var(--primary-red);
+  margin-bottom: 30px;
+  font-weight: 500;
+}
 
-        .contact-title {
-            font-size: 2rem;
-            color: var(--primary-red);
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
 
-        .contact-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
+.contact-text a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--primary-green);
+  transition: all 0.3s ease;
+}
 
-        .contact-text a {
-            color: var(--primary-green);
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid var(--primary-green);
-            transition: all 0.3s ease;
-        }
+.contact-text a:hover {
+  color: var(--primary-red);
+  border-bottom-color: var(--primary-red);
+}
 
-        .contact-text a:hover {
-            color: var(--primary-red);
-            border-bottom-color: var(--primary-red);
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .combined-section {
+    padding: 60px 20px;
+  }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .combined-section {
-                padding: 60px 20px;
-            }
+  .testimonials-area {
+    margin-bottom: 60px;
+  }
 
-            .testimonials-area {
-                margin-bottom: 60px;
-            }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
 
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 40px;
-            }
+  .contact-title {
+    font-size: 1.7rem;
+  }
 
-            .contact-title {
-                font-size: 1.7rem;
-            }
+  .testimonial-slide {
+    padding: 30px 50px;
+  }
 
-            .testimonial-slide {
-                padding: 30px 50px;
-            }
+  .quote-icon-left,
+  .quote-icon-right {
+    font-size: 5rem;
+  }
 
-            .quote-icon-left,
-            .quote-icon-right {
-                font-size: 5rem;
-            }
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
 
-            .testimonial-text {
-                font-size: 1.1rem;
-            }
+  .contact-text {
+    font-size: 1rem;
+  }
+}
 
-            .contact-text {
-                font-size: 1rem;
-            }
-        }
+@media (max-width: 480px) {
+  .testimonial-slide {
+    padding: 20px 35px;
+  }
 
-        @media (max-width: 480px) {
-            .testimonial-slide {
-                padding: 20px 35px;
-            }
+  .quote-icon-left {
+    top: -5px;
+    left: 5px;
+    font-size: 4rem;
+  }
 
-            .quote-icon-left {
-                top: -5px;
-                left: 5px;
-                font-size: 4rem;
-            }
+  .quote-icon-right {
+    bottom: -10px;
+    right: 5px;
+    font-size: 4rem;
+  }
 
-            .quote-icon-right {
-                bottom: -10px;
-                right: 5px;
-                font-size: 4rem;
-            }
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-            .testimonial-text {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
 
-            .testimonial-author {
-                font-size: 0.9rem;
-            }
+  .section-title {
+    font-size: 1.8rem;
+  }
 
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .contact-title {
-                font-size: 1.5rem;
-            }
-        }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
