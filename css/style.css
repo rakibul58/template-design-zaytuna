@@ -3389,14 +3389,14 @@ body {
   transform: translateY(-10px);
 }
 
-.card-footer {
+.adm-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tradition-card:hover .card-footer {
+.tradition-card:hover .adm-card-footer {
   transform: translateY(-10px);
 }
 
@@ -3563,7 +3563,7 @@ body {
   opacity: 0.95;
 }
 
-.card-footer {
+.adm-card-footer {
   padding: 35px 40px;
   background: var(--bg-white);
 }
@@ -3629,7 +3629,7 @@ body {
     font-size: 0.95rem;
   }
 
-  .card-footer {
+  .adm-card-footer {
     padding: 30px;
   }
 }
@@ -3892,5 +3892,564 @@ body {
 
   .contact-title {
     font-size: 1.5rem;
+  }
+}
+
+.community-section {
+  padding: 100px 20px;
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-red);
+  margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .community-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .section-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  margin-bottom: 200px;
+}
+
+/* Left Side - Image */
+.image-side {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-side:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease;
+}
+
+.image-side:hover .image-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Right Side - Content */
+.content-side {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #5d6e2f 100%);
+  color: white;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-title {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 35px;
+  letter-spacing: 0.5px;
+}
+
+.content-description {
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .image-side {
+    min-height: 400px;
+  }
+
+  .content-side {
+    padding: 60px 50px;
+  }
+
+  .content-title {
+    font-size: 36px;
+  }
+
+  .content-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .image-side {
+    min-height: 300px;
+  }
+
+  .content-side {
+    padding: 40px 30px;
+  }
+
+  .content-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .content-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+.campus-info-grid-section {
+  padding: 0px 20px 80px;
+}
+
+.campus-info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.campus-info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.campus-info-card {
+  background: var(--bg-white-transparent);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.campus-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.campus-info-card-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.campus-info-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.campus-info-card:hover .campus-info-card-image img {
+  transform: scale(1.05);
+}
+
+.campus-info-card-content {
+  padding: 35px 30px;
+  text-align: center;
+}
+
+.campus-info-card-title {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.campus-info-card-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.campus-info-card-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.campus-info-card-button:hover {
+  background: var(--text-primary);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .campus-info-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .campus-info-card-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .campus-info-grid-section {
+    padding: 60px 20px;
+  }
+
+  .campus-info-card-content {
+    padding: 30px 25px;
+  }
+
+  .campus-info-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .campus-info-card-description {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .campus-info-card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .campus-info-card-content {
+    padding: 25px 20px;
+  }
+
+  .campus-info-card-title {
+    font-size: 1.2rem;
+  }
+
+  .campus-info-card-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .campus-info-card-button {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+}
+
+/* Animation on scroll */
+@keyframes campusCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.campus-info-card {
+  animation: campusCardFadeIn 0.6s ease-out;
+}
+
+.campus-info-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.campus-info-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.campus-info-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.campus-life-hero {
+  width: 100%;
+  background-color: var(--bg-light);
+}
+
+.campus-life-title-bar {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--bg-light);
+}
+
+.campus-life-main-title {
+  font-size: 2rem;
+  color: var(--primary-red);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.campus-life-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.campus-life-slider-wrapper {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.campus-life-slide {
+  min-width: 100%;
+  display: flex;
+}
+
+.campus-life-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 500px;
+  width: 100%;
+}
+
+.campus-life-image-panel {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.campus-life-image-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.campus-life-image-panel:hover::before {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Slide 1 Images */
+.slide-1-left {
+  background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+}
+
+.slide-1-center {
+  background-image: url("https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+}
+
+.slide-1-right {
+  background-image: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+}
+
+/* Slide 2 Images */
+.slide-2-left {
+  background-image: url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+}
+
+.slide-2-center {
+  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+}
+
+.slide-2-right {
+  background-image: url("https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+}
+
+/* Slide 3 Images */
+.slide-3-left {
+  background-image: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+}
+
+.slide-3-center {
+  background-image: url("https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+}
+
+.slide-3-right {
+  background-image: url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+}
+
+/* Navigation Arrows */
+.campus-life-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.campus-life-nav-btn:hover {
+  background: var(--primary-red);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.campus-life-prev {
+  left: 20px;
+}
+
+.campus-life-next {
+  right: 20px;
+}
+
+/* Navigation Dots */
+.campus-life-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 25px 0;
+  background-color: var(--bg-light);
+}
+
+.campus-life-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.campus-life-dot:hover {
+  background-color: #a0a0a0;
+}
+
+.campus-life-dot.active {
+  background-color: var(--primary-green);
+  width: 35px;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .campus-life-image-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .campus-life-image-panel {
+    height: 300px;
+  }
+
+  .campus-life-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .campus-life-prev {
+    left: 10px;
+  }
+
+  .campus-life-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .campus-life-title-bar {
+    padding: 25px 20px;
+  }
+
+  .campus-life-main-title {
+    font-size: 1.8rem;
+  }
+
+  .campus-life-image-panel {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .campus-life-title-bar {
+    padding: 20px 15px;
+  }
+
+  .campus-life-main-title {
+    font-size: 1.6rem;
+  }
+
+  .campus-life-image-panel {
+    height: 200px;
+  }
+
+  .campus-life-nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .campus-life-prev {
+    left: 5px;
+  }
+
+  .campus-life-next {
+    right: 5px;
   }
 }

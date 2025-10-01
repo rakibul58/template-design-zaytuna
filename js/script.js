@@ -194,3 +194,37 @@ playButtons.forEach(button => {
     alert('Video player would open here');
   });
 });
+
+
+let currentCampusSlide = 0;
+const campusSlides = document.querySelectorAll('.campus-life-slide');
+const campusDots = document.querySelectorAll('.campus-life-dot');
+const campusWrapper = document.getElementById('campusSliderWrapper');
+const totalCampusSlides = campusSlides.length;
+
+function updateCampusSlider() {
+  campusWrapper.style.transform = `translateX(-${currentCampusSlide * 100}%)`;
+
+  campusDots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentCampusSlide);
+  });
+}
+
+function changeCampusSlide(direction) {
+  currentCampusSlide = (currentCampusSlide + direction + totalCampusSlides) % totalCampusSlides;
+  updateCampusSlider();
+}
+
+function goToCampusSlide(index) {
+  currentCampusSlide = index;
+  updateCampusSlider();
+}
+
+// Auto-advance slider every 6 seconds
+setInterval(() => {
+  changeCampusSlide(1);
+}, 6000);
+
+// Make functions global
+window.changeCampusSlide = changeCampusSlide;
+window.goToCampusSlide = goToCampusSlide;
